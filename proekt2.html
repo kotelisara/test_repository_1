@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: pink;
+  color:grey;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color:white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width:100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Welcome to my world</h1>
+  <h2>It's Sara here</h2>
+</div>
+
+<div class="navbar">
+  <a href="#">Home</a>
+  <a href="#">About me</a>
+  <a href="#">Travel</a>
+  <a href="#" class="right">Contact</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <h5>Photo of me:</h5>
+    <p>
+        <img src="sara3.jpg" alt="Me" style="width:100%">
+    </p>
+
+
+    <p style = "font-family:georgia,garamond,serif;font-size:16px;font-style:italic;">
+        My name is Sara. I was born in Ohrid and now I live in Skopje, where I go to college.
+        I am student at Faculty of Electrical Engineering and Information Technologies in fourth year
+        at direction Computer hardware engineering and electronics.
+        Some of my favourite things to do are read books, 
+        listen to music, and of course to solve tasks at college (lie :P).
+        These are activities that I enjoy immensely and indulge in daily.
+        Also my life moto is to become a electrical engineer.
+        I have been told that I am a charming, kind, attitude-prone 
+        person with "oddities". I look up mostly to my family members, especially
+        my dad, as a guiding figure in life.
+        Follow me for more :D
+        </p>
+        
+    <h3>Travelgram</h3>
+    <p>Here is some photos of me during traveling :)</p>
+    <img src="sara1.jpg" alt="Me" style="width:100%">
+    <img src="sara2.jpg" alt="Me" style="width:100%">
+    <img src="sara4.jpg" alt="Me" style="width:100%">
+    <img src="sara6.jpg" alt="Me" style="width:100%">
+    
+  </div>
+  <div class="main">
+    <h2>Favourite TV Shows</h2>
+    <img src="serija.jpg" alt="Me" style="width:50%">
+    <ul>
+        <li>Friends</li>
+        <li>Gossip Girl</li>
+        <li>Dynasty</li>
+        
+    </ul>
+   
+    <br>
+    <h2>Favourite type of music</h2>
+    <img src="muzika.jpg" alt="Music" style="width:50%">
+    <ul>
+        <li>The Weeknd "After hours"</li>
+        <li>Justin Bieber "Changes"</li>
+        <li>Travis Scott "Astroworld"</li>
+        
+    </ul>
+    <br>
+    <h2>Favourite food</h2>
+    <img src="hrana.jpg" alt="hrana" style="width:50%">
+			<ul>
+				<li>Lasagne</li>
+				<li>Cheesecake</li>
+				<li>Chrispychicken</li>
+				
+            </ul>      
+    <br>
+    <h2>Favourite cities</h2>
+    
+			<ul>
+				<li>Barcelona</li>
+				<li>Monte Carlo</li>
+				<li>Cannes</li>
+				
+            </ul>     
+            <body>
+    
+       
+                <div class="slideshow-container">
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="barsa.jpg" style="width:30%">
+               
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="monte.jpg" style="width:30%">
+            
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="barsa1.jpg" style="width:30%">
+                  
+                </div>
+            
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                </div>
+                
+                <script>
+                var slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                  setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+                </script>
+                
+                </body>
+
+
+
+  </div>
+
+
+
+
+</body>
+</html>
