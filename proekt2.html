@@ -43,6 +43,7 @@ body {
   text-decoration: none;
 }
 
+
 /* Right-aligned link */
 .navbar a.right {
   float: right;
@@ -87,6 +88,7 @@ body {
   .row {   
     flex-direction: column;
   }
+  
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
@@ -96,8 +98,10 @@ body {
     width:100%;
   }
 }
+ 
 </style>
 </head>
+
 <body>
 
 <div class="header">
@@ -106,12 +110,21 @@ body {
 </div>
 
 <div class="navbar">
-  <a href="#">Home</a>
-  <a href="#">About me</a>
-  <a href="#">Travelgram</a>
-  <a href="#" class="right">Contact</a>
+  <a class="active" href="#home">Home</a>
+  <a href="#About me">About me</a>
+  <a href="#Travelgram">Travelgram</a>
+  <a href="#Contact" class="right">Contact</a>
 </div>
-
+<script>
+  function myFunction() {
+  var x = document.getElementById("navbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
 <div class="row">
   <div class="side">
     <h2>About Me</h2>
@@ -137,25 +150,92 @@ body {
         
     <h3>Travelgram</h3>
     <p>Here is some photos of me during traveling :)</p>
+
     <img src="sara1.jpg" alt="Me" style="width:100%">   
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+<body>      
+  <button type="button" onclick="myFunction()">Like</button>
+  
+  <p id="demo">0</p>
+  <textarea rows="2" cols="25" name="comment" form="usrform">Enter your comment...</textarea>
 
-<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
-    <img src="sara2.jpg" alt="Me" style="width:100%">
-    
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
-    <img src="sara4.jpg" alt="Me" style="width:100%">
-   
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <input type="button" value="Comment" onclick="popup()"><br />
+<script>
+  var add = (function () {
+    var counter = 0;
+    return function () {counter += 1; return counter;}
+  })();
+  
+  function myFunction(){
+    document.getElementById("demo").innerHTML = add();
+  }
+</script>
 
-<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+</body>
+
+    <img src="sara2.jpg" alt="Me" style="width:100%">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>  
+<body>      
+  <button type="button" onclick="myFunction()">Like</button>
+  
+  <p id="demo">0</p>
+  
+<script>
+  var add = (function () {
+    var counter = 0;
+    return function () {counter += 1; return counter;}
+  })();
+  
+  function myFunction(){
+    document.getElementById("demo").innerHTML = add();
+  }
+</script>
+</body>
+
+
+  <img src="sara4.jpg" alt="Me" style="width:100%">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+<body>      
+  <button type="button" onclick="myFunction()">Like</button>
+  
+  <p id="demo">0</p>
+  
+<script>
+  var add = (function () {
+    var counter = 0;
+    return function () {counter += 1; return counter;}
+  })();
+  
+  function myFunction(){
+    document.getElementById("demo").innerHTML = add();
+  }
+</script>
+</body>
+
     <img src="sara6.jpg" alt="Me" style="width:100%">
-    
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+<body>      
+  <button type="button" onclick="myFunction()">Like</button>
+  
+  <p id="demo">0</p>
+  
+<script>
+  var add = (function () {
+    var counter = 0;
+    return function () {counter += 1; return counter;}
+  })();
+  
+  function myFunction(){
+    document.getElementById("demo").innerHTML = add();
+  }
+</script>
+</body>
 
-<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
     
   </div>
   <div class="main">
@@ -197,8 +277,6 @@ body {
 				
             </ul>     
             <body>
-    
-       
                 <div class="slideshow-container">
                 
                 <div class="mySlides fade">
@@ -268,7 +346,7 @@ body {
             <head>
                 <h2>Short story about Barcelona </h2>
              <style type ="text/css">
-             p { background-color:lightpink;
+             p { background-color: whitesmoke;
              margin-bottom: .5em;
              font-family:Arial, Helvetica, sans-serif
              }
@@ -303,7 +381,7 @@ body {
                     }
                     
                     .html {width: 90%; background-color:deeppink;}
-                    .css {width: 80%; background-color: pink;}
+                    .css {width: 80%; background-color:lightpink;}
                     .c {width: 65%; background-color: palevioletred;}
                     .assembly {width: 60%; background-color: #808080;}
                     </style>
@@ -356,5 +434,8 @@ body {
     <p><strong>Here is a link of my profile <a href="http://instagram.com">Instagram</a> </strong></p>
                 </br>
   </div>
+ 
+
+      
 </body>
 </html>
