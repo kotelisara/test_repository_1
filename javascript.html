@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script type="text/javascript">
+        document.writeln("<h1>Welcome</h1>");  
+        //Alert window
+        window.alert("welcome to js programming");   
+
+        //Variable so prompt
+        var name;
+        name=window.prompt("please enter your name");
+        document.writeln("<h1>Hello" + name +"to javascript</h1>");
+
+        //sobiranje na dva broja
+        var number1;
+        var number2;
+        var firstnumber; //broj1 vnesen od korisnikot
+        var secondnumber; //broj2 vnesen od korisnikot
+        var sum;
+        firstnumber=window.prompt("vnesi go prviot broj");
+        secondnumber=prompt("vnesi go vtoriot broj");
+        number1=parseInt(firstnumber);
+        number2=parseInt(secondnumber);
+        sum=number1 + number2;
+        document.writeln("Sumata e" + sum);
+
+        //If ciklusi
+        var name;
+        var now=new Date(); //momentalen datum
+        var hour=now.getHours(); //momentalen sat
+        name=prompt("Vnesi go tvoeto ime");
+        if(hour < 12)
+        {
+            document.writeln("good morning");
+        }
+        if(hour >= 12)
+        {
+
+            hour=hour-12
+            if(hour < 6)
+            
+                document.writeln("good aftrenoon");
+            
+                if( hour > 6)
+                document.writeln("good night");
+            
+        } document.writeln(name + "welcome");
+ 
+        // Za average vrednost na vneseni ocenki
+
+        var total;
+        var gradeCounter;
+        var grade;
+        var gradeValue;
+        var average;
+
+        total=0;
+        gradeCounter=1; //loop zato 1
+        while(gradeCounter <= 10)
+        { 
+            grade=window.promp("enter your grade");
+            gradeValue= parseInt(grade); //za brojka 
+            total=total + gradeValue ;
+            gradeCounter=gradeCounter + 1;
+        }
+    average= total/10;
+
+  document.writeln("total average is" + average );
+
+       //Vgnezdeni izjavi so rezultati od ispit
+       var passes=0; //broj na passes
+       var failures=0; //broj na neupesi
+       var student=1; // student counter
+       var result; //rezultati od exam
+ 
+       while(student <=10)
+       {
+           result=window.prompt("Enter result (1=pass,2=fail)");
+           if(result=="1")
+           
+               passes=passes+1;
+            else
+            failures=failures + 1;
+        student=student + 1;
+           }
+document.writeln("<p> Passed " + passes + "Failed" + failures + "</p>");
+
+
+     //for repetition
+      var counter=1;
+      for(counter=1; counter<=7; ++counter)
+      document.writeln( "<p style = 'font-size: " + 
+       counter + "ex'>HTML5 font size " + counter +"ex</p>" ); // se zgolemvit font sizeot i toa pred ex
+       
+    // switch
+    var choice;
+    var startTag;
+    var endTag;
+    var validInput;
+    var listType;
+ 
+    choice=window.prompt("select a list style");
+
+    switch(choice)
+    {
+        case "1":
+            startTag="<ol>"
+            endTag="<ol>"
+            listType="<h1>>Numbered List</h1>"
+                break;
+        case "2":
+            startTag="<ol>"
+            endTag="<ol>"
+            listType="<h1>>Lettered List</h1>"
+                break;
+        case "3":
+            startTag="<ol>"
+            endTag="<ol>"
+            listType="<h1>>Roman Numbered List</h1>"
+                break;
+                default:
+                validInput = false; 
+    }
+    if ( validInput ===true ) 
+     { 
+        document.writeln( listType + startTag ); 
+        for ( var i=1; i <=3; ++i ) 
+         document.writeln( "<li>List item " +i+"</li>" ); 
+         document.writeln( endTag ); 
+        }
+        else 
+        document.writeln( "Invalid choice: " + choice);
+
+
+
+
+
+
+    </script>
+
+
+
+
+<body>
+        
+
+    </body>
+</head>
+</html>
+

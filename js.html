@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+      <script type="text/javascript">
+      // Stepenuvanje- Square
+        document.writeln( "<h1>Square the numbers from 1 to 10</h1>" ); 
+        for(var x=1; x<=10; ++x)
+         {
+            document.writeln("the square of" + x + "is" + square(x));
+         }
+        function square()
+         {
+            return y*y;
+         }
+
+// Maximum ispadna
+var input1=window.prompt("enter first number","0");
+var input2=window.prompt("enter second number","0");
+var input3=window.prompt( "Enter third number","0")
+
+var value1 = parseFloat( input1 );
+var value2 = parseFloat( input2 );
+var value3 = parseFloat( input3 );
+
+var maxValue=maximum( value1,  value2, value3); //funkcijata e maximum
+
+document.writeln("<p>First number:" + value1 + "</p>" +
+                 "<p>Second number" + value2 + "</p>" +
+                 "<p>Third number" + value3 + "</p>" )
+function maximum(x, y, z)
+{
+return Math.max(x, Math.max(y, z));
+}
+
+
+
+// random number generator на броеви од 0 до 1
+var value;
+documetn.writeln("Random Numbers <ol>") //da se sredeni kako vo tabela podredena
+for(var i=1; i<=30; ++i)
+{
+    value=Math.floor(1 + Math.random() * 6); //zemanje na cela vrednost na poniskata so math.floor
+    document.writeln("<li>"+ value + "</li>");
+
+}
+document.writeln( "</ol>" ); 
+
+
+//Nizi
+
+var c= new Array(12); // vaka se kreira niza so 12 elementi
+var n=[10,20,30,40,50];
+function start(){
+   var theArray=[1,2,3,4,5,6,7,8,9,10];
+   var total1=0;
+   var total2=0;
+var lenght=theArray.length;
+for(var i=0; i< lenght; ++i)
+{
+   total1=total1 + theArray[i];
+}
+}
+//referenciranje
+function start(){
+   var a=[1, 2 ,3, 4, 5];
+   outputArray("Original array:",  a , document.getElementById("orignalArray"));
+   modifyArray("Modified array is:", a , docume.getElementById("modifiedArray"));
+
+   document.getElementById("orignalArray").innerHTML = "a[3] before modify is" + a[3];
+   modifyArray(a[3]);
+   document.getElementById("modifiedArray").innerHTML="a[3] after modify is" + a[3];
+}
+function outputArray(heading, theArray, output)
+{
+   output.innerHTML = heading + theArray.join("");
+}
+
+// sortiranje
+function start(){
+   var a=[10, 1, 9, 2, 8, 3, 7, 4, 6, 5];
+   outputArray("data item in original order", a, document.getElementById("orignalArray"));
+   a.sort(compareIntegers);
+   outputArray("Data items in sorted order are", a, document.getElementById("sortedArray"));
+}
+
+function outputArray(heading, theArray, output)
+{
+   output.innerHTML = heading + theArray.join("");
+}
+
+function compareIntegers( value1, value2)
+{
+   return parseInt(value1) - parseInt(value2);  // za sortiranje dali edna vrednost e pomala/pogolema od druga
+}
+
+window.addEventListener( "load", start, false );
+
+
+
+// metodi
+function show() {
+   document.write('Name:' + this.name);    //write e metodot
+}
+function Person(name, age){
+   this.name=name;  //konstruktor
+   this.age=age;
+   this.show=show();
+}
+var p= new person('Sara', 22); //kreiranje objekt
+p.show();
+
+
+//s.charAt() i charCodeAt, fromCharCode
+function start(){
+   var s="ZEBRA";
+   var s2="ABsjdi"
+   var result="";
+
+result="<p> Character in index 0 at" + s + "is" + s.charAt(0) + "</p";
+result+="<p>Character code in index 0 at" + s + "is" + s.charCodeAt(0) + "</p>";
+result+="<p>" + String.fromCharCode(87, 79, 82, 68) + "contains charcter codes 87, 79, 82, 68 </p>";
+result+="<p>" + s2 + "in lowercase is" + s2.toLowerCase() + "</p>"; //opagjacki toLowerCase
+result+="<p>" + s2 + "in uppercase is" + s2.toUpperCase() + "</p>"; //rastecki toUpperCase
+document.getElementById("results").innerHTML=result;
+}
+
+

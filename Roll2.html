@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Random dice image generation using Math.random. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Random Dice Images</title> 
+      <style type = "text/css">
+         li { display: inline; margin-right: 10px; }
+         ul { margin: 0; }
+      </style>
+
+      <script>
+         var die1Image;
+         var die2Image;
+         var die3Image;
+         var die4Image;
+         // get the elements id
+
+         function start(){
+             var button=document.getElementById("rollButton");
+             button.addEventListener("click", rollDice, false);
+             die1Image=document.getElementById("die1");
+             die2Image=document.getElementById("die2");
+             die3Image=document.getElementById("die3");
+             die4Image=document.getElementById("die4");
+
+         }
+         function rollDice()
+         {   setImage(die1Image);
+             setImage(die2Image);
+             setImage(die3Image);
+             setImage(die4Image);
+         }
+
+         function setImage(dieImg)
+         {
+             var dieValue=Math.floor( 1+ Math.random() * 6);
+             dieImg.setAttribute( "src", "die" + dieValue + ".png" );           
+         }
+
+         window.addEventListener( "load", start, false );
+
+
+      </script>
