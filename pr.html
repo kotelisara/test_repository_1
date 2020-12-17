@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    var guest = prompt("NAJAVA");
+        
+
+    function comment1() {
+        event.preventDefault()
+        let t1 = document.getElementById("input1").value;
+        let comm1 = JSON.parse(localStorage.getItem('comments1')) || [];
+        var datum1 = new Date();
+        t1 = guest + ': ' + t1 + '<br>' + datum1.toString();
+        comm1.push(t1)
+        localStorage.setItem('comments1', JSON.stringify(comm1))
+        console.log(comm1)
+        let newString1 = ""
+        comm1.forEach(element => {
+            newString1 += element
+            newString1 += "<hr>"
+        });
+        document.getElementById("comment1").innerHTML = newString1;
+    }    
+</script>
+</head>
+
+<body>
+    <div id="box">
+        <p id="comment1" ></p>
+        <form onsubmit="comment1()">
+            <input type="text" id="input1" placeholder="Enter comment" autocapitalize="off" />
+            <input type="submit" id="submitbutton" value="Add comment">
+        </form>
+    </div>
+
+</body>
+</html>

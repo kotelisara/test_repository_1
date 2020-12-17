@@ -5,6 +5,69 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+  body {
+           
+        }
+         
+        .grid {
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 10px 50px 50px 50px;
+            border: 2px solid #cbcbcb;
+            
+        }
+         
+        .grid h1 {
+            font-family: "sans-serif";
+            background-color: lightslategray;
+            font-size: 60px;
+            text-align: center;
+            color: #ffffff;
+            padding: 2px 0px;
+            
+        }
+         
+        #score {
+            color: pink;
+            text-align: center;
+            font-size: 30px;
+        }
+         
+        .grid #question {
+            font-family: "monospace";
+            font-size: 20px;
+            color: #01BBFF;
+        }
+         
+        .buttons {
+            margin-top: 10px;
+        }
+         
+        #btn0, #btn1, #btn2, #btn3 {
+            background-color: #209ecc;
+            width: 100px;
+            font-size: 20px;
+            color: #fff;
+            border: 3px solid #1D3C6A;
+            margin: 10px 40px 10px 0px;
+            padding: 10px 10px;
+        }
+         
+        #btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+            cursor: pointer;
+            background-color: #01BBFF;
+        }
+         
+        #btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus {
+            outline: 0;
+        }
+         
+        #progress {
+            color: #2b2b2b;
+            font-size: 18px;
+        }
 * {
   box-sizing: border-box;
 }
@@ -14,26 +77,26 @@ body {
   margin: 0;
 }
 
-/* Style the header */
+
 .header {
   padding: 40px;
   text-align: center;
   background: pink;
-  color:grey;
+  color:black;
 }
 
-/* Increase the font size of the h1 element */
+
 .header h1 {
   font-size: 40px;
 }
 
-/* Style the top navigation bar */
+
 .navbar {
   overflow: hidden;
   background-color: #333;
 }
 
-/* Style the navigation bar links */
+
 .navbar a {
   float: left;
   display: block;
@@ -44,46 +107,45 @@ body {
 }
 
 
-/* Right-aligned link */
+
 .navbar a.right {
   float: right;
 }
 
-/* Change color on hover */
+
 .navbar a:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* Column container */
+
 .row {  
   display: flex;
   flex-wrap: wrap;
 }
 
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
+
 .side {
   flex: 30%;
   background-color: #f1f1f1;
   padding: 20px;
 }
 
-/* Main column */
+
 .main {   
   flex: 70%;
   background-color: white;
   padding: 20px;
 }
 
-/* Fake image, just for this example */
+
 .fakeimg {
   background-color: #aaa;
   width: 100%;
   padding: 20px;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 700px) {
   .row {   
     flex-direction: column;
@@ -91,30 +153,109 @@ body {
   
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
   .navbar a {
     float: none;
     width:100%;
   }
 }
- 
-</style>
-</head>
+body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+   
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+    
 
+    .column {
+      float: left;
+      width: 50%;
+      margin-top: 6px;
+      padding: 20px;
+    }
+    
+   
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+   
+    @media screen and (max-width: 600px) {
+      .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }     
+      div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        border-width: 5px;
+        float: left;
+        width: 180px;
+      }
+      
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+      
+      div.gallery img {
+        width: 100%;
+        height: auto;
+        
+      }
+      
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+    </style>
 <body>
-
 <div class="header">
+  <div style="background-image: url('prof.jpg');">
   <h1>Welcome to my world</h1>
-  <h2>It's Sara here</h2>
+  <br></br> <br></br>
+  <h3>Sara's blog</h3>
 </div>
-
+<nav>
 <div class="navbar">
   <a class="active" href="#home">Home</a>
-  <a href="#About me">About me</a>
-  <a href="#Travelgram">Travelgram</a>
-  <a href="#Contact" class="right">Contact</a>
-</div>
+  <a href='Aboutme'>About me</a>
+  <a href="Quiz">Quiz</a>
+  <a href='Contact' class="right">Contact</a>
+</div> </nav>
+
 <script>
   function myFunction() {
   var x = document.getElementById("navbar");
@@ -127,7 +268,8 @@ body {
 </script>
 <div class="row">
   <div class="side">
-    <h2>About Me</h2>
+
+    <h2 id="Aboutme">About Me</h2>
     <h5>Photo of me:</h5>
     <p>
         <img src="sara3.jpg" alt="Me" style="width:100%">
@@ -147,99 +289,128 @@ body {
         my dad, as a guiding figure in life.
         Follow me for more :D
         </p>
-        
+    
     <h3>Travelgram</h3>
     <p>Here is some photos of me during traveling :)</p>
-
-    <img src="sara1.jpg" alt="Me" style="width:100%">   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
-<body>      
-  <button type="button" onclick="myFunction()">Like</button>
-  
-  <p id="demo">0</p>
-  <textarea rows="2" cols="25" name="comment" form="usrform">Enter your comment...</textarea>
-
-
-    <input type="button" value="Comment" onclick="popup()"><br />
-<script>
-  var add = (function () {
-    var counter = 0;
-    return function () {counter += 1; return counter;}
-  })();
-  
-  function myFunction(){
-    document.getElementById("demo").innerHTML = add();
-  }
-</script>
-
-</body>
-
-    <img src="sara2.jpg" alt="Me" style="width:100%">    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>  
-<body>      
-  <button type="button" onclick="myFunction()">Like</button>
-  
-  <p id="demo">0</p>
-  
-<script>
-  var add = (function () {
-    var counter = 0;
-    return function () {counter += 1; return counter;}
-  })();
-  
-  function myFunction(){
-    document.getElementById("demo").innerHTML = add();
-  }
-</script>
-</body>
-
-
-  <img src="sara4.jpg" alt="Me" style="width:100%">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
-<body>      
-  <button type="button" onclick="myFunction()">Like</button>
-  
-  <p id="demo">0</p>
-  
-<script>
-  var add = (function () {
-    var counter = 0;
-    return function () {counter += 1; return counter;}
-  })();
-  
-  function myFunction(){
-    document.getElementById("demo").innerHTML = add();
-  }
-</script>
-</body>
-
-    <img src="sara6.jpg" alt="Me" style="width:100%">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
-<body>      
-  <button type="button" onclick="myFunction()">Like</button>
-  
-  <p id="demo">0</p>
-  
-<script>
-  var add = (function () {
-    var counter = 0;
-    return function () {counter += 1; return counter;}
-  })();
-  
-  function myFunction(){
-    document.getElementById("demo").innerHTML = add();
-  }
-</script>
-</body>
-
+    <script>
+      var add = (function () {
+        var counter = 0;
+        return function () {counter += 1; return counter;}
+      })();
+      
+      function myFunction(){
+        document.getElementById("demo").innerHTML = add();
+      }
+    </script>
     
+  <img src="sara1.jpg" alt="Me" style="width:100%">   
+  <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+  
+   <button type="button" onclick="myFunction()">Like</button>
+   <p id="demo">0</p>
+   
+   <input type="text" id="fname" name="firstname" placeholder="Your comment..">
+   <input type="button" value="Comment" onclick="popup()"></br>
+
+
+<img src="sara2.jpg" alt="Me" style="width:100%">    
+<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>     
+ <button type="button" onclick="myFunction()">Like</button>
+ <p id="demo">0</p>
+ <input type="text" id="fname" name="firstname" placeholder="Your comment..">
+ <input type="button" value="Comment" onclick="popup()"></br>
+
+<img src="sara4.jpg" alt="Me" style="width:100%">
+<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+     
+  <button type="button" onclick="myFunction()">Like</button>
+  <p id="demo">0</p>
+
+  <input type="text" id="fname" name="firstname" placeholder="Your comment..">
+  <input type="button" value="Comment" onclick="popup()"></br>
+
+<img src="sara6.jpg" alt="Me" style="width:100%">
+<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+      
+  <button type="button" onclick="myFunction()">Like</button>
+  <p id="demo">0</p>
+
+  <input type="text" id="fname" name="firstname" placeholder="Your comment..">
+  <input type="button" value="Comment" onclick="popup()"></br>
+
+<img src="sara7.jpg" alt="Me" style="width:100%">
+<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+  
+  <button type="button" onclick="myFunction()">Like</button>
+  <p id="demo">0</p>
+
+  <input type="text" id="fname" name="firstname" placeholder="Your comment..">
+  <input type="button" value="Comment" onclick="popup()"></br>
+
+  <img src="sara8.jpg" alt="Me" style="width:100%">
+  <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+  
+  <button type="button" onclick="myFunction()">Like</button>
+  <p id="demo">0</p>
+
+  <input type="text" id="fname" name="firstname" placeholder="Your comment..">
+  <input type="button" value="Comment" onclick="popup()"></br>
+  <br></br> 
+  
+  <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+  style="background-color:rgb(228, 92, 176);width:100px;height:20px;padding:60px;">
+  Mouse Over Me</div>
+  
+  <script>
+  function mOver(obj) {
+    obj.innerHTML = "Thank You"
+  }
+  
+  function mOut(obj) {
+    obj.innerHTML = "Mouse Over Me"
+  }
+  </script>  
+  <br></br><br></br>
+
+  <script>
+    document.write(Date());
+    </script>
+
   </div>
   <div class="main">
-    <h2>Favourite TV Shows</h2>
+      <h1>Mini gallery of my people</h1>
+
+      <div class="gallery">
+        <a target="_blank" href="img1.jpg">
+          <img src="img1.jpg" alt="dad" width="600" height="400">
+        </a>
+        <div class="desc">My dad</div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="img2.jpg">
+          <img src="img2.jpg" alt="Friends" width="600" height="400">
+        </a>
+        <div class="desc">Friends</div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="img3.jpg">
+          <img src="img3.jpg" alt="Family" width="600" height="400">
+        </a>
+        <div class="desc">Family</div>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img4.jpg">
+          <img src="img4.jpg" alt="brother" width="600" height="400">
+        </a>
+        <div class="desc">My brother</div>
+      </div>
+     
+  
+   <br/><br/><br/><br/><br/><br/>
+   <br/> <br></br> <br/><br/><br/><br/><br/><br/><br/><br/><br/><h2>Favourite TV Shows</h2>
     <img src="serija.jpg" alt="Me" style="width:50%">
     <ul>
         <li>Friends</li>
@@ -258,6 +429,9 @@ body {
         <li>Travis Scott "Astroworld"</li>
         
     </ul>
+  
+    </iframe>  <iframe width="350" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+    </iframe>
     <br>
     <h2>Favourite food</h2>
     <img src="hrana.jpg" alt="hrana" style="width:50%">
@@ -359,9 +533,6 @@ body {
                     “from a provincial town where it was difficult to live, to a truly modern city.
                 </p>
             </body>
-
-
-
                 <head>
                     <meta name="viewport" content="width=device-width, initial-scale=1">
                     <style>
@@ -404,12 +575,12 @@ body {
                       <div class="skills c ">65%</div>
                     </div>
                     
-                    <p>Assebmly</p>
+                    <p>Assembly</p>
                     <div class="container">
                       <div class="skills assembly">60%</div>
                     </div>
                     
-                    </body>
+                   
 
                 
     <h2>How did you like my blog?</h2> 
@@ -431,196 +602,212 @@ body {
     <br>
     <h2>If you like my blog, please follow me on instagram :) </h2>  
     <p><strong>Here is a link of my profile <a href="http://instagram.com">Instagram</a> </strong></p>
-                </br>
-              
-                <body>
-
-                  <p>Click the button to calculate the number of years since midnight, January 1, 1970.</p>
-                  
-                  <button onclick="myFunction()">Try it</button>
-                  
-                  <p id="demo"></p>
-                  
-                  <script>
-                  function myFunction() {
-                    var minutes = 1000 * 60;
-                    var hours = minutes * 60;
-                    var days = hours * 24;
-                    var years = days * 365;
-                    var d = new Date();
-                    var t= d.getTime();
-                  
-                    var y = Math.round(t / years);
-                  
-                    document.getElementById("demo").innerHTML = y;
-                  }
-                  </script>
-                  
-                  </body>
-                </div>
-  <body>
-    <main>
-      <div class="header">
-        <h2>Quiz</h2>
-      </div>
-      <div class="settings">
-        <h3 style="text-align: center;">Set up your Quiz!</h3>
-        <label for="category">Category</label>
-        <select name="category" id="category">
-          <option value="9">General</option>
-          <option value="27">Geography</option>
-          <option value="23">History</option>
-          <option value="21">Sports</option>
-        </select>
-         
-        <button id="start" class="submit">Start</button>
-      </div>  
-      <div class="main">
-        <div class="final">
-          <h3>You answered all of the questions!</h3>
-          <p>Score: </p><p class="score"></p>
-          <h4>Want to try it again?</h4>
-          <button id="again" class="submit">Again</button>
-        </div>
-        <div class="quiz">
-          <div class="count">
-          </div>
-          
-        
-        </div>
-        <br>
-          <div class="mt30">
-            <label for="difficulty">Difficulty</label>
-            <label class="container" style="display: inline; margin-left: 30px;">Easy
-              <input type="radio" name="radio" id="easy">
-              <span class="checkmark" style="margin-top: 2px;"></span>
-            </label>
-            <label class="container" style="display: inline; margin-left: 30px;">Medium
-              <input type="radio" name="radio" id="medium">
-              <span class="checkmark" style="margin-top: 2px;"></span>
-            </label>
-            <label  class="container" style="display: inline; margin-left: 30px;">Hard
-              <input type="radio" name="radio" id="hard">
-              <span class="checkmark" style="margin-top: 2px;"></span>
-            </label>
-          </div>
-         
-      </div>
-    </main>
-    <script type="module" src="index.js"></script>
-  </body>
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-    }
+                  </br>
     
-    * {
-      box-sizing: border-box;
-    }
-    
-    /* Style inputs */
-    input[type=text], select, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      margin-top: 6px;
-      margin-bottom: 16px;
-      resize: vertical;
-    }
-    
-    input[type=submit] {
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      cursor: pointer;
-    }
-    
-    input[type=submit]:hover {
-      background-color: #45a049;
-    }
-    
-    /* Style the container/contact section */
-    .container {
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 10px;
-    }
-    
-    /* Create two columns that float next to eachother */
-    .column {
-      float: left;
-      width: 50%;
-      margin-top: 6px;
-      padding: 20px;
-    }
-    
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    
-    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
-      .column, input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-      }
-    }
-    </style>
+                  <title>Quiz</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-    
-  <br>
-    <div class="container">
-      <div style="text-align:center">
-        <h2>Contact Us</h2>
-        <p>If you like it, please come back!</p>
-      </div>
-      <div class="row">
-        <div class="column">
-          <img src="blog.jpg" style="width:60%">
+        <div class="grid">
+            <div id="quiz">
+                <h1 id="Quiz">Quiz in JavaScript</h1>
+                <hr style="margin-bottom: 20px">
+     
+                <p id="question"></p>
+     
+                <div class="buttons">
+                    <button id="btn0"><span id="choice0"></span></button>
+                    <button id="btn1"><span id="choice1"></span></button>
+                    <button id="btn2"><span id="choice2"></span></button>
+                    <button id="btn3"><span id="choice3"></span></button>
+                </div>
+     
+                <hr style="margin-top: 50px">
+                <footer>
+                    <p id="progress">Question x of y</p>
+                </footer>
+            </div>
         </div>
-        <div class="column">
-          <form action="/action_page.php">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-            <label for="country">Country</label>
-            <select id="country" name="country">
-              <option value="australia">Macedonia</option>
-              <option value="canada">Serbia</option>
-              <option value="usa">USA</option>
-            </select>
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-            <input type="submit" value="Submit">
-          </form>
-        </div>
-      </div>
-    </div>
+     
+    <script src="question.js"></script>
+  <body>
     <script>
-<body>
+    function Quiz(questions) {
+        this.score = 0;
+        this.questions = questions;
+        this.questionIndex = 0;
+    }
+     
+    Quiz.prototype.getQuestionIndex = function() {
+        return this.questions[this.questionIndex];
+    }
+     
+    Quiz.prototype.guess = function(answer) {
+        if(this.getQuestionIndex().isCorrectAnswer(answer)) {
+            this.score++;
+        }
+     
+        this.questionIndex++;
+    }
+     
+    Quiz.prototype.isEnded = function() {
+        return this.questionIndex === this.questions.length;
+    }
+     
+     
+    function Question(text, choices, answer) {
+        this.text = text;
+        this.choices = choices;
+        this.answer = answer;
+    }
+     
+    Question.prototype.isCorrectAnswer = function(choice) {
+        return this.answer === choice;
+    }
+     
+     
+    function populate() {
+        if(quiz.isEnded()) {
+            showScores();
+        }
+        else {
+            // show question
+            var element = document.getElementById("question");
+            element.innerHTML = quiz.getQuestionIndex().text;
+     
+            // show options
+            var choices = quiz.getQuestionIndex().choices;
+            for(var i = 0; i < choices.length; i++) {
+                var element = document.getElementById("choice" + i);
+                element.innerHTML = choices[i];
+                guess("btn" + i, choices[i]);
+            }
+     
+            showProgress();
+        }
+    };
+     
+    function guess(id, guess) {
+        var button = document.getElementById(id);
+        button.onclick = function() {
+            quiz.guess(guess);
+            populate();
+        }
+    };
+     
+     
+    function showProgress() {
+        var currentQuestionNumber = quiz.questionIndex + 1;
+        var element = document.getElementById("progress");
+        element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
+    };
+     
+    function showScores() {
+        var gameOverHTML = "<h1>Result</h1>";
+        gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
+        var element = document.getElementById("quiz");
+        element.innerHTML = gameOverHTML;
+    };
+     
+    // create questions here
+    var questions = [
+        new Question("Hyper Text Markup Language Stand For?", ["JavaScript", "XHTML","CSS", "HTML"], "HTML"),
+        new Question("Which language is used for styling web pages?", ["HTML", "JQuery", "CSS", "XML"], "CSS"),
+        new Question("Which is not a JavaScript Framework?", ["Python Script", "JQuery","Django", "NodeJS"], "Django"),
+        new Question("Which is used for Connect To Database?", ["PHP", "HTML", "JS", "All"], "PHP"),
+        new Question("Inside which HTML element do we put the JavaScript?", ["js", "javascript", "script", "scripting"], "script")
+    ];
+     
+    // create quiz
+    var quiz = new Quiz(questions);
+     
+    // display quiz
+    populate();
+</script>
 
-<p>The internal clock in JavaScript starts at midnight January 1, 1970.</p>
-<p>Click the button to display the number of milliseconds since midnight, January 1, 1970.</p>
+<br/><br/><br/><br/><br/><br/>
+<p>See what I think about your results</p>
 
-<button onclick="myFunction()">Try it</button>
-
-<p id="demo"></p>
+<button id="myBtn">Try it</button>
 
 <script>
-function myFunction() {
-  var d = new Date();
-  var n = d.getTime();
-  document.getElementById("demo").innerHTML = n;
+document.getElementById("myBtn").addEventListener("click", myalert);
+
+function myalert() {
+  alert ("You are great anyway!");
 }
 </script>
+<br/><br/><br/><br/>
+<div class="mt30">
+  <label for="difficulty">Difficulty about the quiz?!</label>
+  <label class="container" style="display: inline; margin-left: 30px;">Easy
+    <input type="radio" name="radio" id="easy">
+    <span class="checkmark" style="margin-top: 2px;"></span>
+  </label>
+  <label class="container" style="display: inline; margin-left: 30px;">Medium
+    <input type="radio" name="radio" id="medium">
+    <span class="checkmark" style="margin-top: 2px;"></span>
+  </label>
+  <label  class="container" style="display: inline; margin-left: 30px;">Hard
+    <input type="radio" name="radio" id="hard">
+    <span class="checkmark" style="margin-top: 2px;"></span>
+  </label>
+</div>
+<br/><br/><br/><br/>
+<div class="container"></div>
+<div style="text-align:center">
+  <h2 id="Contact">Contact Us</h2>
+  <p>If you like it, please come back!</p>
+</div>
+
+<div class="row"></div>
+  <div class="column">
+    <img src="blog.jpg" style="width:100%">
+  </div>
+
+  <div class="column">
+    <form action="/action_page.php">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">Macedonia</option>
+        <option value="canada">Serbia</option>
+        <option value="usa">USA</option>
+      </select>
+      <label for="subject">Opinion about us</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+      <input type="submit" value="Submit" >
+      <button onclick="alertw()">Submit</button>
+
+<script>
+function alertw() {
+  alert("I'll contact you :)");
+}
+</script>  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    var guest = prompt("NAJAVA");
+    function comment1() {
+        event.preventDefault()
+        let t1 = document.getElementById("input1").value;
+        let comm1 = JSON.parse(localStorage.getItem('comments1')) || [];
+        var datum1 = new Date();
+        t1 = guest + ': ' + t1 + '<br>' + datum1.toString();
+        comm1.push(t1)
+        localStorage.setItem('comments1', JSON.stringify(comm1))
+        console.log(comm1)
+        let newString1 = ""
+        comm1.forEach(element => {
+            newString1 += element
+            newString1 += "<hr>"
+        });
+        document.getElementById("comment1").innerHTML = newString1;
+    }    </script>
+
 </body>
 
-    
-</body>
 </html>

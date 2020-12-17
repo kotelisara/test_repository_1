@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Volumen of sphera</title>
+        <div id="radius">
+      <script>
+          function volumen(){
+              var x=document.getElementById("radius").value;
+              var volumen;
+              volumen=x*x;
+              document.getElementById("volumen").value=volumen;
+            return volumen;
+
+          }
+
+
+</script>
+</head>
+   <body>
+<p>Input radius of sphera</p>
+<form action="" method="post">
+<label for="radius">Radius</label>
+<input type="text" name="radius" id="radius">
+<label for="volumen">Volumen</label>
+<input type="text" name="volumen" id="volumen">
+<input type="button" value="Calculate">
+</form>
+</body>
+</html>
